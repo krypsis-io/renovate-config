@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "labels": ["dependencies"],
+  "commitMessagePrefix": "chore(deps):",
+  "minimumReleaseAge": "3 days",
+  "minor": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "description": "Automerge GitHub Actions minor and patch updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Skip quarantine for vulnerability remediation PRs",
+      "matchUpdateTypes": ["vulnerability"],
+      "minimumReleaseAge": "0 seconds"
+    }
+  ]
+}
