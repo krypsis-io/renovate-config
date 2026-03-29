@@ -23,5 +23,5 @@ Add this to your repository's `renovate.json`:
 | Minimum release age | 3 days | New package versions must exist for 3 days before Renovate opens a PR (supply chain defense) |
 | Minor automerge | Enabled | Minor updates auto-merge after checks pass |
 | Patch automerge | Enabled | Patch updates auto-merge after checks pass |
-| GitHub Actions automerge | Enabled | Minor and patch Actions updates auto-merge |
+| GitHub Actions automerge | Minor and patch only | Minor and patch Actions updates auto-merge; major requires manual review |
 | Vulnerability exemption | 0 seconds | Security remediation PRs bypass the 3-day quarantine |
