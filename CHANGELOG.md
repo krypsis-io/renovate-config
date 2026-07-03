@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/krypsis-io/renovate-config/compare/v1.0.0...v1.1.0) (2026-07-03)
+
+
+### Features
+
+* stamp pinned action digests with full semver versions ([#3](https://github.com/krypsis-io/renovate-config/issues/3)) ([cad8faf](https://github.com/krypsis-io/renovate-config/commit/cad8fafcba925b3d1e9f98c8b00bc3a189de0c58))
+
 # 1.0.0 (2026-03-29)
 
 
