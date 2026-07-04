@@ -6,6 +6,7 @@
   ],
   "labels": ["dependencies"],
   "commitMessagePrefix": "chore(deps):",
+  "timezone": "America/New_York",
   "minimumReleaseAge": "3 days",
   "minor": {
     "automerge": true
@@ -13,17 +14,58 @@
   "patch": {
     "automerge": true
   },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "commitMessageAction": "lock file maintenance"
+  },
   "packageRules": [
     {
-      "description": "Automerge GitHub Actions minor and patch updates",
+      "description": "Automerge GitHub Actions minor and patch updates, grouped, with ci type to avoid version bumps",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "GitHub Actions",
+      "commitMessagePrefix": "ci(deps):",
       "automerge": true
+    },
+    {
+      "description": "Group major GitHub Actions updates, ci type to avoid version bumps, manual review",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "GitHub Actions (major)",
+      "commitMessagePrefix": "ci(deps):",
+      "automerge": false
+    },
+    {
+      "description": "Require manual review for major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["dependencies", "major"]
     },
     {
       "description": "Skip quarantine for vulnerability remediation PRs",
       "matchUpdateTypes": ["vulnerability"],
       "minimumReleaseAge": "0 seconds"
+    }
+  ],
+  "customDatasources": {
+    "apk-wolfi": {
+      "defaultRegistryUrlTemplate": "https://cwaits6.github.io/apk-datasource/x86_64/{{packageName}}.json",
+      "format": "json"
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update apk add name=version pins in Dockerfiles from the apk-datasource index",
+      "managerFilePatterns": ["/(^|/)Dockerfile[^/]*$/"],
+      "matchStringsStrategy": "recursive",
+      "matchStrings": [
+        "apk\\s+add[^\\n\\\\]*(?:\\\\[^\\S\\n]*\\n[^\\n\\\\]*)*",
+        "(?<depName>[a-zA-Z0-9][a-zA-Z0-9._+-]*)=(?<currentValue>\\d+[^\\s\\\\]+)"
+      ],
+      "datasourceTemplate": "custom.apk-wolfi",
+      "versioningTemplate": "loose"
     }
   ]
 }
