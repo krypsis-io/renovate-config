@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/krypsis-io/renovate-config/compare/v1.2.0...v1.2.1) (2026-07-04)
+
+
+### Bug Fixes
+
+* stop pinning internal workflows; absorb wolfi-base policy ([#7](https://github.com/krypsis-io/renovate-config/issues/7)) ([083e49e](https://github.com/krypsis-io/renovate-config/commit/083e49e4468e588a9ad9bc684238623fc5bfc806))
+
 # [1.2.0](https://github.com/krypsis-io/renovate-config/compare/v1.1.0...v1.2.0) (2026-07-04)
 
 
