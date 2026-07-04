@@ -21,7 +21,7 @@
   },
   "packageRules": [
     {
-      "description": "Internal shared workflows track main; the 3-day gate lives in the pipeline, not the ref",
+      "description": "Keep krypsis-io/.github shared workflows on main, never pin",
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["krypsis-io/.github"],
       "pinDigests": false
