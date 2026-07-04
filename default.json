@@ -43,6 +43,14 @@
       "automerge": false
     },
     {
+      "description": "Wolfi-base image digests - grouped with lock file maintenance, merge Monday",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["cgr.dev/chainguard/wolfi-base"],
+      "groupName": "Lock file maintenance",
+      "automerge": true,
+      "automergeSchedule": ["before 6am on Monday"]
+    },
+    {
       "description": "Require manual review for major updates",
       "matchUpdateTypes": ["major"],
       "automerge": false,
