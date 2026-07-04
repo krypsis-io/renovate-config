@@ -21,6 +21,12 @@
   },
   "packageRules": [
     {
+      "description": "Internal shared workflows track main; the 3-day gate lives in the pipeline, not the ref",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["krypsis-io/.github"],
+      "pinDigests": false
+    },
+    {
       "description": "Automerge GitHub Actions minor and patch updates, grouped, with ci type to avoid version bumps",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
