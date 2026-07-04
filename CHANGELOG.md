@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/krypsis-io/renovate-config/compare/v1.1.0...v1.2.0) (2026-07-04)
+
+
+### Features
+
+* add apk-wolfi datasource and port customizations from cwaits6 preset ([#6](https://github.com/krypsis-io/renovate-config/issues/6)) ([e5b0fd6](https://github.com/krypsis-io/renovate-config/commit/e5b0fd6b9fdf3882b68d9c10cfcf516e7bca13d7))
+
 # [1.1.0](https://github.com/krypsis-io/renovate-config/compare/v1.0.0...v1.1.0) (2026-07-03)
 
 
