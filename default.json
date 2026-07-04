@@ -21,6 +21,12 @@
   },
   "packageRules": [
     {
+      "description": "Keep krypsis-io/.github shared workflows on main, never pin",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["krypsis-io/.github"],
+      "pinDigests": false
+    },
+    {
       "description": "Automerge GitHub Actions minor and patch updates, grouped, with ci type to avoid version bumps",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
@@ -35,6 +41,14 @@
       "groupName": "GitHub Actions (major)",
       "commitMessagePrefix": "ci(deps):",
       "automerge": false
+    },
+    {
+      "description": "Wolfi-base image digests - grouped with lock file maintenance, merge Monday",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["cgr.dev/chainguard/wolfi-base"],
+      "groupName": "Lock file maintenance",
+      "automerge": true,
+      "automergeSchedule": ["before 6am on Monday"]
     },
     {
       "description": "Require manual review for major updates",
