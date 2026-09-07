@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/krypsis-io/renovate-config/compare/v1.2.1...v1.3.0) (2026-09-07)
+
+
+### Features
+
+* **gomod:** run go mod tidy after Go module updates ([#8](https://github.com/krypsis-io/renovate-config/issues/8)) ([26f0c11](https://github.com/krypsis-io/renovate-config/commit/26f0c115368a2b59fbe6a6746df02934e9fb6a7a))
+
 ## [1.2.1](https://github.com/krypsis-io/renovate-config/compare/v1.2.0...v1.2.1) (2026-07-04)
 
 
