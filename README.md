@@ -20,9 +20,9 @@ Add this to your repository's `renovate.json`:
 | Base preset | `config:recommended` | Renovate's recommended defaults (pinning, scheduling, grouping) |
 | Labels | `dependencies` | All Renovate PRs are labeled `dependencies` |
 | Commit prefix | `chore(deps):` | Conventional commit format, avoids triggering version bumps |
-| Minimum release age | 3 days | New package versions must exist for 3 days before Renovate opens a PR (supply chain defense) |
+| Minimum release age | 7 days | New package versions must exist for 7 days before Renovate opens a PR (supply chain defense) |
 | Minor automerge | Enabled | Minor updates auto-merge after checks pass |
 | Patch automerge | Enabled | Patch updates auto-merge after checks pass |
 | GitHub Actions automerge | Minor and patch only | Minor and patch Actions updates auto-merge; major requires manual review |
-| Vulnerability exemption | 0 seconds | Security remediation PRs bypass the 3-day quarantine |
+| Vulnerability exemption | 0 seconds | Security remediation PRs bypass the 7-day quarantine |
 | Go module tidy | `gomodTidy` | Renovate runs `go mod tidy` after Go module updates so stale `go.sum` entries are pruned instead of accumulating |
