@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/krypsis-io/renovate-config/compare/v1.3.0...v1.4.0) (2026-09-07)
+
+
+### Features
+
+* raise minimum release age to 7 days ([#9](https://github.com/krypsis-io/renovate-config/issues/9)) ([5aa8f29](https://github.com/krypsis-io/renovate-config/commit/5aa8f29a0578f3442673e637eef52fb1f9f54759))
+
 # [1.3.0](https://github.com/krypsis-io/renovate-config/compare/v1.2.1...v1.3.0) (2026-09-07)
 
 
