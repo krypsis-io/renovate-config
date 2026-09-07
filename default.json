@@ -7,7 +7,7 @@
   "labels": ["dependencies"],
   "commitMessagePrefix": "chore(deps):",
   "timezone": "America/New_York",
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "7 days",
   "minor": {
     "automerge": true
   },
