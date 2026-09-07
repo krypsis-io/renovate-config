@@ -19,6 +19,7 @@
     "automerge": true,
     "commitMessageAction": "lock file maintenance"
   },
+  "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
       "description": "Keep krypsis-io/.github shared workflows on main, never pin",

@@ -25,3 +25,4 @@ Add this to your repository's `renovate.json`:
 | Patch automerge | Enabled | Patch updates auto-merge after checks pass |
 | GitHub Actions automerge | Minor and patch only | Minor and patch Actions updates auto-merge; major requires manual review |
 | Vulnerability exemption | 0 seconds | Security remediation PRs bypass the 3-day quarantine |
+| Go module tidy | `gomodTidy` | Renovate runs `go mod tidy` after Go module updates so stale `go.sum` entries are pruned instead of accumulating |
