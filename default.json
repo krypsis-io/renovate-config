@@ -36,6 +36,15 @@
       "automerge": true
     },
     {
+      "description": "Group annotated workflow tool versions (trivy, cosign, ...) with GitHub Actions updates",
+      "matchManagers": ["custom.regex"],
+      "matchFileNames": [".github/workflows/**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "GitHub Actions",
+      "commitMessagePrefix": "ci(deps):",
+      "automerge": true
+    },
+    {
       "description": "Group major GitHub Actions updates, ci type to avoid version bumps, manual review",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["major"],
@@ -81,6 +90,15 @@
       ],
       "datasourceTemplate": "custom.apk-wolfi",
       "versioningTemplate": "loose"
+    },
+    {
+      "customType": "regex",
+      "description": "Update workflow tool versions annotated with '# renovate: datasource=... depName=...' on the line above",
+      "managerFilePatterns": ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?\\s*\\n\\s*[\\w-]+:\\s*[\"']?(?<currentValue>[^\\s\"']+)[\"']?"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     }
   ]
 }
