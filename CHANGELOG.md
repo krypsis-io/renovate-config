@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/krypsis-io/renovate-config/compare/v1.4.0...v1.5.0) (2026-10-18)
+
+
+### Features
+
+* update annotated tool versions in GitHub workflows ([#11](https://github.com/krypsis-io/renovate-config/issues/11)) ([d851519](https://github.com/krypsis-io/renovate-config/commit/d851519fbee99f0f216049e5f553713188a51627))
+
 # [1.4.0](https://github.com/krypsis-io/renovate-config/compare/v1.3.0...v1.4.0) (2026-09-07)
 
 
