@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/krypsis-io/renovate-config/compare/v1.5.0...v1.5.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* raise vulnerability-fix PRs and keep lock file maintenance from missing its window ([#12](https://github.com/krypsis-io/renovate-config/issues/12)) ([a2f8d57](https://github.com/krypsis-io/renovate-config/commit/a2f8d571cd0367604a00328c5c07b5d3f2f1cc99))
+
 # [1.5.0](https://github.com/krypsis-io/renovate-config/compare/v1.4.0...v1.5.0) (2026-10-18)
 
 
