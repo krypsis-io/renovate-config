@@ -24,5 +24,6 @@ Add this to your repository's `renovate.json`:
 | Minor automerge | Enabled | Minor updates auto-merge after checks pass |
 | Patch automerge | Enabled | Patch updates auto-merge after checks pass |
 | GitHub Actions automerge | Minor and patch only | Minor and patch Actions updates auto-merge; major requires manual review |
-| Vulnerability exemption | 0 seconds | Security remediation PRs bypass the 7-day quarantine |
+| Vulnerability alerts | GitHub Dependabot alerts + OSV | Security fix PRs are labeled `security` and skip the 7-day minimum release age and every schedule (Renovate's built-in `vulnerabilityAlerts` defaults). GitHub alerts need Dependabot alerts enabled on the repo; OSV covers direct dependencies only |
+| Lock file maintenance | Monday 00:00–11:59 (America/New_York), automerged | Refreshes the lock file weekly, which is what updates transitive dependencies. Twelve hours, because the hosted app runs a quiet repo only every few hours and can miss the default four-hour window |
 | Go module tidy | `gomodTidy` | Renovate runs `go mod tidy` after Go module updates so stale `go.sum` entries are pruned instead of accumulating |

@@ -17,8 +17,13 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "commitMessageAction": "lock file maintenance"
+    "commitMessageAction": "lock file maintenance",
+    "schedule": ["* 0-11 * * 1"]
   },
+  "vulnerabilityAlerts": {
+    "labels": ["dependencies", "security"]
+  },
+  "osvVulnerabilityAlerts": true,
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
@@ -65,11 +70,6 @@
       "matchUpdateTypes": ["major"],
       "automerge": false,
       "labels": ["dependencies", "major"]
-    },
-    {
-      "description": "Skip quarantine for vulnerability remediation PRs",
-      "matchUpdateTypes": ["vulnerability"],
-      "minimumReleaseAge": "0 seconds"
     }
   ],
   "customDatasources": {
